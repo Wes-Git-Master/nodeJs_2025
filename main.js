@@ -157,6 +157,7 @@ const em = new emitter.EventEmitter();
 
 em.on('fcall', ()=>{
     console.log('fcall');
+
 })
 
 // em.on('scall', (name, age)=>{
@@ -164,6 +165,7 @@ em.on('fcall', ()=>{
 // })
 em.once('scall', (name, age)=>{
     console.log('scall',name, age);
+
 })
 
 em.emit('scall', 'Max', 15)
