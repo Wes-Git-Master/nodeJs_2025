@@ -18,9 +18,9 @@ app.post("/users", async (req:Request, res:Response) => {
     res.json(data)
 })
 
-app.getById("/users/:id", async (req:Request, res:Response) => {
+app.get("/users/:id", async (req:Request, res:Response) => {
     const {id} = req.params;
-    const data = await userService.create(user);
+    const data = await userService.getById(id);
     res.json(data)
 })
 
@@ -31,8 +31,8 @@ const dbConnection = async (): Promise<void> => {
 
     while (!dbCon){
         try {
-            'Connecting to db';
-            await mongoose.connect('mongodb+srv://edvinfaas:<@0508Ves@>@cluster0.ji8p7.mongodb.net/nodeJs-express-db-2025')
+            console.log('Connecting to db ...');
+            await mongoose.connect('mongodb+srv://edvinfaas:1qwe2asd3zxc@cluster0.ji8p7.mongodb.net/nodeJs-express-db-2025')
             dbCon = true;
             console.log('Database available !!!');
 
