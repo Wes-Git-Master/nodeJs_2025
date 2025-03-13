@@ -1,4 +1,5 @@
 /.idea/
-/nodeJs_2025.iml
-/note.txt
+/dist
+/node_modules
 /.env
+/nodeJs_2025.iml
